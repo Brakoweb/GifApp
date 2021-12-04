@@ -1,6 +1,8 @@
 body {
   padding: 60px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family:cursive;
+  background-color:rgb(98, 216, 236);
+  background-image: url('./images/bg-lines.png');
 }
 
 input{
@@ -9,4 +11,32 @@ input{
   height: 1.6rem;
   font-size: large;
 
+}
+
+.card-grid{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.card{
+  align-content: center;
+  background-color: lightcyan;
+  border: 1px solid grey;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  max-width: 300px;
+  overflow: hidden;
+}
+
+.card p {
+  padding: 5px;
+  text-align: center;
+}
+
+.card img {
+  max-width: 300px;
+  max-height: 170px;
+  width: fit-content;
 }
