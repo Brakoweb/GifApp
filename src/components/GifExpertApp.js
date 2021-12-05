@@ -3,11 +3,13 @@ import { AddCategory } from './AddCategory';
 import GifGrid from './GifGrid';
 
 const GifExpertApp = () => {
-    const [categories, setCategories] = useState(['One Piece']);
+    const [categories, setCategories] = useState([]);
+
+    const handleReset = () => setCategories([]);
 
     return (
         <div>
-            <h2>{'GifApp'}</h2>
+            <h2>GifApp</h2>
             <AddCategory setCategories = {setCategories} />
             <hr />
             <ol>
@@ -15,6 +17,7 @@ const GifExpertApp = () => {
                     <GifGrid category={element} key={element} />
                 )}
             </ol>
+            <button className="go-top" onClick={handleReset}>Reset</button>
         </div>
     )
 }

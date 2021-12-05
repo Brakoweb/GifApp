@@ -40,3 +40,52 @@ input{
   max-height: 170px;
   width: fit-content;
 }
+
+.go-top {
+	position: fixed;
+	bottom: 3em;
+	right: 8%;
+	text-decoration: none;
+	background-color: rgba(25, 0, 255, 0.3);
+	font-size: 12px;
+	padding: 1em;
+  border-radius: 6px;
+  border-color: rgba(38, 0, 255, 0.3);
+}
+
+.go-top:hover {
+	background-color: rgba(38, 0, 255, 0.6);
+}
+
+@media only screen and (max-width: 600px) {
+
+  body, ol{
+    padding: 0;
+  }
+
+  input{
+    margin-right: 10px;
+  }
+
+  .card-grid{
+    display: block;
+  }
+  
+  .card{
+    margin-right: 0px;
+    max-width: none;
+  }
+  
+  .card p {
+    padding: 2px;
+  }
+  
+  .card img {
+    max-width: none;
+    width:100%;
+  }
+
+  .go-top{
+    right: 2%;
+  }
+}
