@@ -15,13 +15,16 @@ const GifExpertApp = () => {
             <hr />
             <ol>
                 {categories.map( element => 
-                    <GifGrid category={element} key={element} />
+                    <GifGrid 
+                        category={element} 
+                        key={element} 
+                    />
                 )}
             </ol>
 
             <Placeholder categories={categories} />
 
-            <button className="go-top" onClick={handleReset}>Reset</button>
+            <button className="reset" onClick={handleReset}>Reset</button>
         </div>
     )
 }

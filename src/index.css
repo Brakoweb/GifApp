@@ -41,7 +41,7 @@ input{
   width: fit-content;
 }
 
-.go-top {
+.reset {
 	position: fixed;
 	bottom: 3em;
 	right: 8%;
@@ -53,7 +53,7 @@ input{
   border-color: rgba(38, 0, 255, 0.3);
 }
 
-.go-top:hover {
+.reset:hover {
 	background-color: rgba(38, 0, 255, 0.6);
 }
 
@@ -95,7 +95,7 @@ input{
     width:100%;
   }
 
-  .go-top{
+  .reset{
     right: 2%;
   }
 }

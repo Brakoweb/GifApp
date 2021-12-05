@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { getGifs } from '../helpers/getGifs';
+import Swal from 'sweetalert2';
 
 export const useFetchGifs = (category) => {
     const [state, setState] = useState({
@@ -10,11 +11,26 @@ export const useFetchGifs = (category) => {
     useEffect(() => {
         getGifs(category)
             .then(imgs => {
+                if (imgs.length < 1) {
                     setState({
-                    data: imgs,
-                    loading: false,
-                })
-            });
+                        data: [],
+                        loading: false,
+                    });
+                    Swal.fire({
+                        position: 'center',
+                        icon: 'error',
+                        title: 'No results were found',
+                        showConfirmButton: false,
+                        timer: 2000
+                    });
+                }else{
+                        setState({
+                        data: imgs,
+                        loading: false,
+                        })
+                    }
+                
+                });
 
     }, [category])
 
