@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {GifGridItem} from '../components/GifGridItem';
+import {GifGridItem} from '../../components/GifGridItem';
 
 describe('Test in <GifGridItem />', () => {
     const title = 'Title';
